@@ -640,7 +640,7 @@
 
     .overview-grid {
       display: grid;
-      grid-template-columns: 1.12fr 1fr 1fr 1fr;
+      grid-template-columns: repeat(4, 1fr);
       gap: 14px;
     }
 
@@ -3716,6 +3716,15 @@
       white-space: normal;
       max-width: 760px;
     }
+
+    /* ============================================================
+       SUPPRESSION — Ticks dorés au-dessus des titres
+    ============================================================ */
+    .delta-kicker-line,
+    .section-kicker,
+    .roadmap-heading-accent {
+      display: none !important;
+    }
   </style>
 </head>
 <body>
@@ -3833,7 +3842,7 @@
       </div>
 
       <div class="overview-grid">
-        <article class="overview-card featured reveal" data-delay="0">
+        <article class="overview-card reveal" data-delay="0">
           <div class="card-index">01</div>
           <h3>Capital privé</h3>
           <p>
@@ -4447,11 +4456,12 @@
     <div class="roadmap-inner">
       <div class="roadmap-heading">
         <div>
-          <span class="roadmap-heading-accent"></span>
           <h2 class="reveal">
             Une vision claire. Des étapes concrètes.
           </h2>
         </div>
+
+        <div class="section-sep reveal" data-delay="60"></div>
 
         <p class="reveal" data-delay="80">
           Chaque jalon est défini, daté et pensé pour consolider l'écosystème
