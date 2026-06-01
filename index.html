@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Valora — Capital Privé. Performance Silencieuse.</title>
+  <title>Valora Capital Privé. Performance Silencieuse.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -541,7 +541,7 @@
     }
 
     /* ============================================================
-       02 — VALORA EN UN COUP D'ŒIL
+       02 VALORA EN UN COUP D'ŒIL
     ============================================================ */
 
     .valora-overview {
@@ -812,7 +812,7 @@
     }
 
     /* ============================================================
-       03 — STRATÉGIES DELTA-NEUTRES
+       03 STRATÉGIES DELTA-NEUTRES
     ============================================================ */
 
     .valora-delta {
@@ -1134,7 +1134,7 @@
     }
 
     /* ============================================================
-       04 — VALORA ACADEMY
+       04 VALORA ACADEMY
     ============================================================ */
 
     .valora-academy {
@@ -1294,10 +1294,10 @@
     }
 
     .academy-cards-inner {
-      width: min(1420px, 100%);
+      width: min(900px, 100%);
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 18px;
     }
 
@@ -1435,7 +1435,7 @@
     }
 
     /* ============================================================
-       05 — TOKEN $VLRA
+       05 TOKEN $VLRA
     ============================================================ */
 
     .valora-token {
@@ -1624,7 +1624,7 @@
     }
 
     /* ============================================================
-       06 — PLAN DE RÉMUNÉRATION
+       06 PLAN DE RÉMUNÉRATION
     ============================================================ */
 
     .valora-compensation {
@@ -1894,7 +1894,7 @@
     }
 
     /* ============================================================
-       07 — RANGS / PIERRES PRÉCIEUSES  (section sombre)
+       07 RANGS / PIERRES PRÉCIEUSES  (section sombre)
     ============================================================ */
 
     .valora-ranks {
@@ -2061,6 +2061,7 @@
       height: 110px;
       position: relative;
       flex-shrink: 0;
+      background: transparent;
       transition: transform 0.32s ease, filter 0.32s ease;
     }
 
@@ -2077,7 +2078,7 @@
       filter: drop-shadow(0 8px 28px rgba(184, 149, 75, 0.40));
     }
 
-    /* Gem images — forme naturelle de la pierre */
+    /* Gem images forme naturelle de la pierre */
     .gem-circle img {
       width: 100%;
       height: 100%;
@@ -2223,7 +2224,7 @@
     }
 
     /* ============================================================
-       08 — ÉCOSYSTÈME VALORA
+       08 ÉCOSYSTÈME VALORA
     ============================================================ */
 
     .valora-ecosystem {
@@ -2375,7 +2376,7 @@
     }
 
     /* ============================================================
-       09 — FEUILLE DE ROUTE  (section sombre)
+       09 FEUILLE DE ROUTE  (section sombre)
     ============================================================ */
 
     .valora-roadmap {
@@ -2686,7 +2687,7 @@
     }
 
     /* ============================================================
-       10 — CTA FINAL + FORMULAIRE D'ACCÈS
+       10 CTA FINAL + FORMULAIRE D'ACCÈS
     ============================================================ */
     .valora-access {
       position: relative;
@@ -2987,7 +2988,7 @@
     }
 
     /* ============================================================
-       11 — FOOTER
+       11 FOOTER
     ============================================================ */
     .valora-footer {
       position: relative;
@@ -3245,7 +3246,7 @@
     }
 
     /* ============================================================
-       DESIGN SYSTEM — Radius unifié (--radius: 16px) partout
+       DESIGN SYSTEM Radius unifié (--radius: 16px) partout
     ============================================================ */
     .overview-card,
     .overview-bottom,
@@ -3278,7 +3279,7 @@
     }
 
     /* ============================================================
-       GLASS SYSTEM — Upgrade complet, variables unifiées
+       GLASS SYSTEM Upgrade complet, variables unifiées
     ============================================================ */
 
     /* Overview-card : passer sur glass-1 */
@@ -3334,7 +3335,7 @@
     }
 
     /* ============================================================
-       GLASS SYSTEM — Inset glow harmonisation (cards existantes)
+       GLASS SYSTEM Inset glow harmonisation (cards existantes)
     ============================================================ */
     .overview-card,
     .overview-bottom,
@@ -3343,7 +3344,7 @@
     }
 
     /* ============================================================
-       FONDU ENTRE SECTIONS — Transitions invisibles
+       FONDU ENTRE SECTIONS Transitions invisibles
        mask-image top + bottom : le contenu apparaît et disparaît
        en fondu dans le fond anthracite commun, sans aucune démarcation.
     ============================================================ */
@@ -3401,7 +3402,7 @@
     }
 
     /* ============================================================
-       FOND UNI SOMBRE — Suppression des images de fond sur toutes
+       FOND UNI SOMBRE Suppression des images de fond sur toutes
        les sections (hormis hero) pour un noir anthracite uniforme
     ============================================================ */
     .valora-overview::before,
@@ -3424,7 +3425,7 @@
     }
 
     /* ============================================================
-       ANIMATIONS — Motion Design
+       ANIMATIONS Motion Design
     ============================================================ */
 
     @keyframes stepPop {
@@ -3432,7 +3433,7 @@
       to   { opacity: 1; transform: scale(1); }
     }
 
-    /* Scroll reveal — état initial caché */
+    /* Scroll reveal état initial caché */
     .reveal {
       opacity: 0;
       transform: translateY(28px);
@@ -3453,7 +3454,7 @@
       transition: transform 0.70s cubic-bezier(0.22, 0.6, 0.36, 1);
     }
 
-    /* Scroll reveal — état visible (ajouté par JS) */
+    /* Scroll reveal état visible (ajouté par JS) */
     .reveal.is-visible {
       opacity: 1;
       transform: translateY(0);
@@ -3480,7 +3481,7 @@
     }
 
     /* ============================================================
-       SÉPARATEUR DORÉ — Unifié entre titre et paragraphe
+       SÉPARATEUR DORÉ Unifié entre titre et paragraphe
     ============================================================ */
     .section-sep,
     .ranks-separator,
@@ -3498,7 +3499,7 @@
     }
 
     /* ============================================================
-       METRICS TICKER — Bande défilante après hero
+       METRICS TICKER Bande défilante après hero
     ============================================================ */
     .valora-ticker {
       overflow: hidden;
@@ -3545,7 +3546,7 @@
     }
 
     /* ============================================================
-       BACKERS — Section partenaires DeFi avec marquee
+       BACKERS Section partenaires DeFi avec marquee
     ============================================================ */
     .valora-backers {
       padding: clamp(44px, 4.5vw, 68px) 0;
@@ -3738,7 +3739,7 @@
     }
 
     /* ============================================================
-       ACCESSIBILITÉ — prefers-reduced-motion
+       ACCESSIBILITÉ prefers-reduced-motion
     ============================================================ */
     @media (prefers-reduced-motion: reduce) {
       .ticker-track, .backers-track {
@@ -3763,7 +3764,7 @@
     }
 
     /* ============================================================
-       BUDGET GPU MOBILE — Retrait backdrop-filter sur cards
+       BUDGET GPU MOBILE Retrait backdrop-filter sur cards
     ============================================================ */
     @media (max-width: 768px) {
       .strategy-card,
@@ -3789,7 +3790,7 @@
     }
 
     /* ============================================================
-       TITRES DE SECTION — Architecture typographique cohérente
+       TITRES DE SECTION Architecture typographique cohérente
        Toutes les sections après Stratégies adoptent EXACTEMENT
        la taille et la typo du titre Delta (référence).
     ============================================================ */
@@ -3810,7 +3811,7 @@
     }
 
     /* ============================================================
-       SUPPRESSION — Ticks dorés au-dessus des titres
+       SUPPRESSION Ticks dorés au-dessus des titres
     ============================================================ */
     .delta-kicker-line,
     .section-kicker,
@@ -3819,7 +3820,7 @@
     }
 
     /* ============================================================
-       RESPONSIVE MOBILE — Audit complet (≤760px puis ≤480px)
+       RESPONSIVE MOBILE Audit complet (≤760px puis ≤480px)
        Bloc final : l'emporte par cascade sur les règles existantes.
     ============================================================ */
     @media (max-width: 760px) {
@@ -4000,7 +4001,7 @@
     }
 
     /* ============================================================
-       MENU MOBILE — Hamburger + Drawer
+       MENU MOBILE Hamburger + Drawer
     ============================================================ */
     .nav-burger {
       display: none;
@@ -4177,7 +4178,7 @@
 <body>
 
   <!-- ============================================================
-       01 — HERO
+       01 HERO
   ============================================================ -->
   <section class="valora-hero" id="accueil">
     <header class="valora-header">
@@ -4253,7 +4254,7 @@
   </section>
 
   <!-- ============================================================
-       TICKER — Métriques défilantes
+       TICKER Métriques défilantes
   ============================================================ -->
   <div class="valora-ticker" aria-hidden="true">
     <div class="ticker-track">
@@ -4294,7 +4295,7 @@
   </div>
 
   <!-- ============================================================
-       02 — VALORA EN UN COUP D'ŒIL
+       02 VALORA EN UN COUP D'ŒIL
   ============================================================ -->
   <section class="valora-overview" id="apropos">
     <div class="overview-inner">
@@ -4371,7 +4372,7 @@
   </section>
 
   <!-- ============================================================
-       03 — STRATÉGIES DELTA-NEUTRES
+       03 STRATÉGIES DELTA-NEUTRES
   ============================================================ -->
   <section class="valora-delta" id="strategies">
     <div class="delta-inner">
@@ -4490,7 +4491,7 @@
   </section>
 
   <!-- ============================================================
-       04 — VALORA ACADEMY
+       04 VALORA ACADEMY
   ============================================================ -->
   <section class="valora-academy" id="academy">
 
@@ -4555,15 +4556,15 @@
   </section>
 
   <!-- ============================================================
-       05 — TOKEN $VLRA
+       05 TOKEN $VLRA
   ============================================================ -->
   <section class="valora-token" id="token">
     <div class="token-hero">
       <div class="token-hero-inner">
 
-        <h2 class="reveal">$VLRA — En développement.</h2>
+        <h2 class="reveal">$VLRA En développement.</h2>
         <div class="section-sep reveal" data-delay="60"></div>
-        <p class="token-hero-lead reveal" data-delay="80">$VLRA est le token natif de Valora, actuellement en développement. La pré-sale sera bientôt disponible — les membres fondateurs y auront accès en priorité.</p>
+        <p class="token-hero-lead reveal" data-delay="80">$VLRA est le token natif de Valora, actuellement en développement. La pré-sale sera bientôt disponible les membres fondateurs y auront accès en priorité.</p>
         <p class="token-hero-body reveal" data-delay="140">$VLRA est un actif d'utilité interne. Il ne constitue pas une valeur mobilière et ne peut être assimilé à un investissement financier.</p>
       </div>
     </div>
@@ -4596,7 +4597,7 @@
           </div>
           <div class="module-body">
             <h4>Allocation dans des projets</h4>
-            <p>Les $VLRA pourront être alloués dans des projets crypto naissants sélectionnés par Valora — pour devenir acteur et co-investisseur des projets de demain.</p>
+            <p>Les $VLRA pourront être alloués dans des projets crypto naissants sélectionnés par Valora pour devenir acteur et co-investisseur des projets de demain.</p>
             <a href="#contact" class="module-explore">Explorer <span>→</span></a>
           </div>
         </article>
@@ -4616,11 +4617,11 @@
       </div>
     </div>
 
-    <p class="token-disclaimer">⚠ $VLRA est en cours de développement. Pré-sale bientôt disponible — accès prioritaire réservé aux membres fondateurs. * $VLRA est un actif d'utilité interne. Il ne constitue pas une valeur mobilière.</p>
+    <p class="token-disclaimer">⚠ $VLRA est en cours de développement. Pré-sale bientôt disponible accès prioritaire réservé aux membres fondateurs. * $VLRA est un actif d'utilité interne. Il ne constitue pas une valeur mobilière.</p>
   </section>
 
   <!-- ============================================================
-       06 — PLAN DE RÉMUNÉRATION
+       06 PLAN DE RÉMUNÉRATION
   ============================================================ -->
   <section class="valora-compensation" id="remuneration">
     <div class="comp-hero">
@@ -4670,7 +4671,7 @@
             </svg>
           </div>
           <h4>Optimisation automatique</h4>
-          <p>La plateforme ajuste en continu les positions et les allocations pour capturer la performance optimale — sans intervention manuelle de votre part.</p>
+          <p>La plateforme ajuste en continu les positions et les allocations pour capturer la performance optimale sans intervention manuelle de votre part.</p>
         </article>
 
         <article class="comp-step-card reveal" data-delay="240">
@@ -4703,7 +4704,7 @@
   </section>
 
   <!-- ============================================================
-       07 — RANGS / PIERRES PRÉCIEUSES
+       07 RANGS / PIERRES PRÉCIEUSES
   ============================================================ -->
   <div class="s-bridge s-bridge--dark" aria-hidden="true"></div>
   <section class="valora-ranks" id="rangs">
@@ -4797,7 +4798,7 @@
   </section>
 
   <!-- ============================================================
-       08 — ÉCOSYSTÈME VALORA
+       08 ÉCOSYSTÈME VALORA
   ============================================================ -->
   <div class="s-bridge s-bridge--light" aria-hidden="true"></div>
   <section class="valora-ecosystem" id="ecosysteme">
@@ -4872,7 +4873,7 @@
 
 
   <!-- ============================================================
-       09 — FEUILLE DE ROUTE
+       09 FEUILLE DE ROUTE
   ============================================================ -->
   <div class="s-bridge s-bridge--dark" aria-hidden="true"></div>
   <section class="valora-roadmap" id="roadmap">
@@ -4906,7 +4907,7 @@
           <div class="rdl-dot"></div>
           <span class="rdl-name">VALORA Academy</span>
           <span class="rdl-status">✓ Validé</span>
-          <p class="rdl-desc">Lancement de la plateforme de formation — sessions live, stratégies, DeFi et crypto du débutant à l'expert.</p>
+          <p class="rdl-desc">Lancement de la plateforme de formation sessions live, stratégies, DeFi et crypto du débutant à l'expert.</p>
         </div>
 
         <div class="rdl-item reveal" data-delay="240">
@@ -4933,7 +4934,7 @@
     </div>
   </section>
 
-  <!-- 10 — CTA FINAL + FORMULAIRE D'ACCÈS -->
+  <!-- 10 CTA FINAL + FORMULAIRE D'ACCÈS -->
   <div class="s-bridge s-bridge--light" aria-hidden="true"></div>
   <section class="valora-access" id="contact">
     <div class="access-inner">
@@ -4992,7 +4993,7 @@
           <p class="form-kicker">Demander mon accès</p>
           <div class="form-kicker-sep"></div>
 
-          <form class="access-form" onsubmit="return false;">
+          <form class="access-form" action="mailto:contact@valorastrategic.com" method="post" enctype="text/plain">
             <div class="form-field">
               <label for="access-name">Nom complet</label>
               <input type="text" id="access-name" name="name" placeholder="Votre nom" autocomplete="name"/>
@@ -5032,7 +5033,7 @@
     </div>
   </section>
 
-  <!-- 11 — FOOTER -->
+  <!-- 11 FOOTER -->
   <div class="s-bridge s-bridge--dark" aria-hidden="true"></div>
   <footer class="valora-footer" id="footer">
     <div class="footer-inner">
@@ -5065,6 +5066,11 @@
             <a href="#strategies">Stratégies</a>
             <a href="#academy">Academy</a>
             <a href="#token">Token $VLRA</a>
+          </div>
+
+          <div class="footer-col">
+            <h3>Contact</h3>
+            <a href="mailto:contact@valorastrategic.com">contact@valorastrategic.com</a>
           </div>
         </div>
       </div>
@@ -5156,7 +5162,7 @@
       });
     })();
 
-    /* ---- Scroll reveal — IntersectionObserver ---- */
+    /* ---- Scroll reveal IntersectionObserver ---- */
     ;(function () {
       if (!('IntersectionObserver' in window)) return;
       var observer = new IntersectionObserver(function (entries) {
@@ -5175,7 +5181,7 @@
         .forEach(function (el) { observer.observe(el); });
     })();
 
-    /* ---- Parallax hero background — RAF + passive scroll ---- */
+    /* ---- Parallax hero background RAF + passive scroll ---- */
     ;(function () {
       var hero = document.querySelector('.valora-hero');
       if (!hero) return;
