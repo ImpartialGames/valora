@@ -3646,6 +3646,115 @@
     }
 
     /* ============================================================
+       ROADMAP DOT TIMELINE
+    ============================================================ */
+    .roadmap-dot-line {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      padding-top: 40px;
+      gap: 0;
+    }
+
+    .rdl-track {
+      position: absolute;
+      top: 0;
+      left: 5%;
+      right: 5%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(184,149,75,0.35) 15%, rgba(184,149,75,0.35) 85%, transparent);
+    }
+
+    .rdl-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 10px;
+    }
+
+    .rdl-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(184,149,75,0.45);
+      background: var(--dark-bg);
+      margin-top: -6px;
+      margin-bottom: 22px;
+      flex-shrink: 0;
+      transition: background 0.26s ease, border-color 0.26s ease, box-shadow 0.26s ease;
+    }
+
+    .rdl-item.done .rdl-dot {
+      background: var(--gold);
+      border-color: var(--gold);
+      box-shadow: 0 0 14px rgba(184,149,75,0.40);
+    }
+
+    .rdl-item:hover .rdl-dot {
+      border-color: var(--gold);
+      box-shadow: 0 0 10px rgba(184,149,75,0.28);
+    }
+
+    .rdl-name {
+      display: block;
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: clamp(15px, 1.4vw, 21px);
+      font-weight: 500;
+      color: var(--dark-text);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .rdl-status {
+      display: block;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.75;
+      margin-bottom: 14px;
+    }
+
+    .rdl-desc {
+      font-size: 12px;
+      color: var(--dark-muted);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .roadmap-dot-line {
+        flex-direction: column;
+        padding-top: 0;
+        gap: 32px;
+      }
+
+      .rdl-track { display: none; }
+
+      .rdl-item {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        gap: 18px;
+      }
+
+      .rdl-dot {
+        margin-top: 4px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+      }
+
+      .rdl-item > div:last-of-type {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    /* ============================================================
        ACCESSIBILITÉ — prefers-reduced-motion
     ============================================================ */
     @media (prefers-reduced-motion: reduce) {
@@ -4548,9 +4657,9 @@
     <div class="comp-hero">
       <div class="comp-hero-inner">
 
-        <h2 class="reveal">Cinq façons de performer avec Valora.</h2>
+        <h2 class="reveal">Cinq piliers de votre performance.</h2>
         <div class="section-sep reveal" data-delay="60"></div>
-        <p class="reveal" data-delay="80">Cinq flux de revenus distincts, actifs simultanément.<br>Chaque dimension de l'écosystème contribue à votre performance.</p>
+        <p class="reveal" data-delay="80">Cinq dimensions fondamentales, activées simultanément.<br>Chaque pilier renforce votre capital et votre maîtrise des marchés.</p>
       </div>
     </div>
 
@@ -4566,8 +4675,8 @@
               <path d="M18 14v8"/>
             </svg>
           </div>
-          <h4>Profit Sharing</h4>
-          <p>Chaque semaine, la plateforme génère des bénéfices. Tu en reçois une part directement, proportionnelle à ton investissement actif, redistribuée sur 10 niveaux de profondeur.</p>
+          <h4>Rendements de stratégie</h4>
+          <p>Les stratégies delta-neutres de Valora génèrent des rendements hebdomadaires stables, distribués directement aux membres actifs, quelle que soit la direction du marché.</p>
         </article>
 
         <article class="comp-step-card reveal" data-delay="80">
@@ -4578,8 +4687,8 @@
               <path d="M12 18l4 4 8-8"/>
             </svg>
           </div>
-          <h4>Capital Bonus</h4>
-          <p>À chaque fois qu'un membre de ton cercle investit, tu es récompensé. Une commission sur chaque dépôt d'investissement réalisé au sein de ton cercle, sur 10 niveaux.</p>
+          <h4>Protection du capital</h4>
+          <p>Des mécanismes quantitatifs conçus pour préserver votre capital tout en maximisant les opportunités à chaque cycle de marché, sans exposition directionnelle.</p>
         </article>
 
         <article class="comp-step-card reveal" data-delay="160">
@@ -4591,8 +4700,8 @@
               <path d="M8.1 8.1l2.8 2.8M25.1 25.1l2.8 2.8M25.1 8.1l-2.8 2.8M8.1 25.1l2.8 2.8"/>
             </svg>
           </div>
-          <h4>Platform Rewards</h4>
-          <p>La plateforme tourne, performe et génère de l'activité en continu. Tu perçois une part des frais de gestion générés par l'activité de ton cercle, semaine après semaine, sur 10 niveaux.</p>
+          <h4>Optimisation automatique</h4>
+          <p>La plateforme ajuste en continu les positions et les allocations pour capturer la performance optimale — sans intervention manuelle de votre part.</p>
         </article>
 
         <article class="comp-step-card reveal" data-delay="240">
@@ -4605,8 +4714,8 @@
               <path d="M19 26c2-5 14-5 14 2"/>
             </svg>
           </div>
-          <h4>Circle Rewards</h4>
-          <p>Chaque nouveau membre qui rejoint ton cercle contribue directement à tes revenus. Une commission sur chaque pass activé dans ton cercle, sans limite de profondeur.</p>
+          <h4>VALORA Academy</h4>
+          <p>Sessions de formation exclusives, explications approfondies des stratégies, parcours complet du débutant à l'expert en DeFi et investissement crypto.</p>
         </article>
 
         <article class="comp-step-card reveal" data-delay="320">
@@ -4616,16 +4725,12 @@
               <polygon points="18,4 22,14 33,14 24,21 27,32 18,25 9,32 12,21 3,14 14,14"/>
             </svg>
           </div>
-          <h4>Prestige Bonus</h4>
-          <p>À chaque rang atteint, Valora te récompense. Des bonus exclusifs débloqués automatiquement à chaque nouvelle étape de ta progression.</p>
+          <h4>Token $VLRA</h4>
+          <p>Accumulez des $VLRA en proportion de votre engagement. Un actif natif encodant votre progression, vos droits de gouvernance et vos accès privilégiés au sein de l'écosystème.</p>
         </article>
       </div>
     </div>
 
-    <div class="comp-bottom-bar reveal" data-delay="160">
-      <strong>Une approche privée, structurée et transparente.</strong>
-      <span>Aucune obligation. Aucune pression. Un cercle, une vision.</span>
-    </div>
   </section>
 
   <!-- ============================================================
@@ -4746,8 +4851,8 @@
               <polyline points="28,14 34,14 34,20"/>
             </svg>
             <div>
-              <h4>Stratégies</h4>
-              <p>Une approche disciplinée de la performance, fondée sur la méthode et l'exposition maîtrisée.</p>
+              <h4>Stratégies VALORA</h4>
+              <p>Accédez aux stratégies delta-neutres institutionnelles de Valora pour générer des rendements stables et décorrélés des mouvements de marché.</p>
             </div>
             <a href="#delta" class="eco-card-link">Explorer →</a>
           </article>
@@ -4758,8 +4863,8 @@
               <path d="M 6 16 L 6 26 C 6 30 12 33 18 33 C 24 33 30 30 30 26 L 30 16"/>
             </svg>
             <div>
-              <h4>Academy</h4>
-              <p>Un espace de transmission réservé aux membres pour progresser et comprendre les mécanismes.</p>
+              <h4>VALORA Academy</h4>
+              <p>Sessions de formation live, explications des stratégies, parcours structuré du débutant à l'expert en DeFi et investissement crypto.</p>
             </div>
             <a href="#academy" class="eco-card-link">Explorer →</a>
           </article>
@@ -4795,38 +4900,7 @@
     </div>
   </section>
 
-  <!-- ============================================================
-       BACKERS — Protocoles DeFi partenaires
-  ============================================================ -->
-  <section class="valora-backers" aria-label="Protocoles partenaires">
-    <div class="backers-inner">
-      <div class="backers-label">
-        <p>Déployé au sein<br>des protocoles leaders<br>de la DeFi mondiale.</p>
-      </div>
-      <div class="backers-overflow">
-        <div class="backers-track">
-          <!-- Brands avec typographie variée (style Halo) -->
-          <span class="backers-brand" style="font-family:Georgia,serif;font-weight:700;letter-spacing:-0.02em;font-size:15px;">Uniswap</span>
-          <span class="backers-brand" style="font-family:Arial,sans-serif;font-weight:900;letter-spacing:0.09em;font-size:12px;text-transform:uppercase;">Aave</span>
-          <span class="backers-brand" style="font-family:'Courier New',monospace;font-weight:700;letter-spacing:0.12em;font-size:13px;text-transform:uppercase;">Compound</span>
-          <span class="backers-brand" style="font-family:Verdana,sans-serif;font-weight:700;letter-spacing:-0.03em;font-size:13px;">Chainlink</span>
-          <span class="backers-brand" style="font-family:'Palatino Linotype',Palatino,serif;font-weight:400;letter-spacing:-0.01em;font-size:16px;">MakerDAO</span>
-          <span class="backers-brand" style="font-family:'Trebuchet MS',sans-serif;font-weight:600;letter-spacing:0.01em;font-size:15px;font-style:italic;">Curve</span>
-          <span class="backers-brand" style="font-family:Arial,sans-serif;font-weight:900;letter-spacing:0.08em;font-size:12px;text-transform:uppercase;">Balancer</span>
-          <span class="backers-brand" style="font-family:Georgia,serif;font-weight:700;letter-spacing:0.02em;font-size:14px;">Convex</span>
-          <!-- Duplicate pour boucle -->
-          <span class="backers-brand" style="font-family:Georgia,serif;font-weight:700;letter-spacing:-0.02em;font-size:15px;">Uniswap</span>
-          <span class="backers-brand" style="font-family:Arial,sans-serif;font-weight:900;letter-spacing:0.09em;font-size:12px;text-transform:uppercase;">Aave</span>
-          <span class="backers-brand" style="font-family:'Courier New',monospace;font-weight:700;letter-spacing:0.12em;font-size:13px;text-transform:uppercase;">Compound</span>
-          <span class="backers-brand" style="font-family:Verdana,sans-serif;font-weight:700;letter-spacing:-0.03em;font-size:13px;">Chainlink</span>
-          <span class="backers-brand" style="font-family:'Palatino Linotype',Palatino,serif;font-weight:400;letter-spacing:-0.01em;font-size:16px;">MakerDAO</span>
-          <span class="backers-brand" style="font-family:'Trebuchet MS',sans-serif;font-weight:600;letter-spacing:0.01em;font-size:15px;font-style:italic;">Curve</span>
-          <span class="backers-brand" style="font-family:Arial,sans-serif;font-weight:900;letter-spacing:0.08em;font-size:12px;text-transform:uppercase;">Balancer</span>
-          <span class="backers-brand" style="font-family:Georgia,serif;font-weight:700;letter-spacing:0.02em;font-size:14px;">Convex</span>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <!-- ============================================================
        09 — FEUILLE DE ROUTE
@@ -4837,103 +4911,54 @@
       <div class="roadmap-heading">
         <div>
           <h2 class="reveal">
-            Une vision claire. Des étapes concrètes.
+            Ce que Valora construit.
           </h2>
         </div>
 
         <div class="section-sep reveal" data-delay="60"></div>
 
         <p class="reveal" data-delay="80">
-          Chaque jalon est défini, daté et pensé pour consolider l'écosystème
-          avec précision. Valora construit sur le long terme.
+          Chaque jalon est une fondation. Valora déploie son écosystème
+          étape par étape, avec méthode et précision.
         </p>
       </div>
 
-      <div class="roadmap-timeline">
-        <article class="roadmap-step active reveal" data-delay="0">
-          <div class="step-marker">
-            <span>01</span>
-          </div>
-          <div class="step-content">
-            <span class="step-date">Juin 2026</span>
-            <h3>Pré-lancement</h3>
-            <p>
-              La phase privée débute. Sélection des premiers membres et leaders
-              du cercle.
-            </p>
-          </div>
-        </article>
+      <div class="roadmap-dot-line">
+        <div class="rdl-track"></div>
 
-        <article class="roadmap-step reveal" data-delay="150">
-          <div class="step-marker">
-            <span>02</span>
-          </div>
-          <div class="step-content">
-            <span class="step-date">Août 2026</span>
-            <h3>Lancement officiel</h3>
-            <p>
-              Activation complète de la plateforme. Onboarding global des membres.
-            </p>
-          </div>
-        </article>
-
-        <article class="roadmap-step reveal" data-delay="300">
-          <div class="step-marker">
-            <span>03</span>
-          </div>
-          <div class="step-content">
-            <span class="step-date">Décembre 2026</span>
-            <h3>Premier événement officiel</h3>
-            <p>
-              Un rassemblement international à Malte pour les membres et partenaires
-              fondateurs du cercle.
-            </p>
-          </div>
-        </article>
-
-        <article class="roadmap-step reveal" data-delay="450">
-          <div class="step-marker">
-            <span>04</span>
-          </div>
-          <div class="step-content">
-            <span class="step-date">Mars 2027</span>
-            <h3>Retraite privée</h3>
-            <p>
-              Une retraite exclusive pour les leaders qualifiés. Stratégie,
-              cohésion et vision à long terme.
-            </p>
-          </div>
-        </article>
-
-        <article class="roadmap-step reveal" data-delay="600">
-          <div class="step-marker">
-            <span>05</span>
-          </div>
-          <div class="step-content">
-            <span class="step-date">Juin 2027</span>
-            <h3>Anniversaire 1 an</h3>
-            <p>
-              Événement mondial de célébration pour les membres et partenaires
-              de l'écosystème Valora.
-            </p>
-          </div>
-        </article>
-      </div>
-
-      <div class="roadmap-footer reveal" data-delay="400">
-        <div>
-          <strong>Progression maîtrisée</strong>
-          <span>Chaque étape consolide la précédente.</span>
+        <div class="rdl-item done reveal" data-delay="0">
+          <div class="rdl-dot"></div>
+          <span class="rdl-name">VALORA Protocole</span>
+          <span class="rdl-status">✓ Validé</span>
+          <p class="rdl-desc">Déploiement des stratégies delta-neutres. Activation de la plateforme d'investissement pour les membres fondateurs.</p>
         </div>
 
-        <div>
-          <strong>Ouverture limitée</strong>
-          <span>La rareté protège la qualité du cercle.</span>
+        <div class="rdl-item done reveal" data-delay="120">
+          <div class="rdl-dot"></div>
+          <span class="rdl-name">VALORA Academy</span>
+          <span class="rdl-status">✓ Validé</span>
+          <p class="rdl-desc">Lancement de la plateforme de formation — sessions live, stratégies, DeFi et crypto du débutant à l'expert.</p>
         </div>
 
-        <div>
-          <strong>Vision long terme</strong>
-          <span>Valora se construit dans la durée.</span>
+        <div class="rdl-item reveal" data-delay="240">
+          <div class="rdl-dot"></div>
+          <span class="rdl-name">Token $VLRA</span>
+          <span class="rdl-status">Pré-sale · Listing</span>
+          <p class="rdl-desc">Pré-vente exclusive aux membres fondateurs, puis listing sur les exchanges partenaires.</p>
+        </div>
+
+        <div class="rdl-item reveal" data-delay="360">
+          <div class="rdl-dot"></div>
+          <span class="rdl-name">VALORA Pay</span>
+          <span class="rdl-status">En développement</span>
+          <p class="rdl-desc">Solution de paiement native intégrée à l'écosystème pour les membres et partenaires de Valora.</p>
+        </div>
+
+        <div class="rdl-item reveal" data-delay="480">
+          <div class="rdl-dot"></div>
+          <span class="rdl-name">Et la suite…</span>
+          <span class="rdl-status">À venir</span>
+          <p class="rdl-desc">L'écosystème Valora continue de s'étendre. Chaque membre actif sera au premier rang des annonces.</p>
         </div>
       </div>
     </div>
@@ -5010,8 +5035,8 @@
             </div>
 
             <div class="form-field">
-              <label for="access-ref">Code de référence</label>
-              <input type="text" id="access-ref" name="ref" placeholder="Votre code de référence"/>
+              <label for="access-ref">Lien de référence</label>
+              <input type="text" id="access-ref" name="ref" placeholder="Votre lien de référence"/>
             </div>
 
             <div class="form-field">
@@ -5071,22 +5096,6 @@
             <a href="#strategies">Stratégies</a>
             <a href="#academy">Academy</a>
             <a href="#token">Token $VLRA</a>
-          </div>
-
-          <div class="footer-col">
-            <h3>Écosystème</h3>
-            <a href="#remuneration">Plan de rémunération</a>
-            <a href="#rangs">Rangs</a>
-            <a href="#ecosysteme">Écosystème Valora</a>
-            <a href="#roadmap">Feuille de route</a>
-            <a href="#contact">Accès privé</a>
-          </div>
-
-          <div class="footer-col">
-            <h3>Contact</h3>
-            <a href="mailto:support@valora.com">support@valora.com</a>
-            <a href="https://www.valoraprivate.com" target="_blank" rel="noopener">www.valoraprivate.com</a>
-            <p>Sur invitation uniquement. Chaque demande est étudiée manuellement.</p>
           </div>
         </div>
       </div>
