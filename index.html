@@ -2057,26 +2057,15 @@
     }
 
     .gem-circle {
-      width: 88px;
-      height: 88px;
-      border-radius: 50%;
-      border: 1.5px solid rgba(184, 149, 75, 0.50);
+      width: 110px;
+      height: 110px;
       position: relative;
       flex-shrink: 0;
-      box-shadow:
-        0 0 0 6px rgba(17, 18, 20, 0.85),
-        0 16px 44px rgba(0, 0, 0, 0.52);
-      transition: border-color 0.32s ease, box-shadow 0.32s ease, transform 0.32s ease;
+      transition: transform 0.32s ease, filter 0.32s ease;
     }
 
     .gem-circle::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 50%;
-      background: linear-gradient(135deg, rgba(255,255,255,0.30) 0%, transparent 50%);
-      z-index: 2;
-      pointer-events: none;
+      content: none;
     }
 
     .gem-circle::after {
@@ -2084,23 +2073,17 @@
     }
 
     .rank-gem-item:hover .gem-circle {
-      border-color: rgba(184, 149, 75, 0.80);
       transform: translateY(-6px);
-      box-shadow:
-        0 0 0 6px rgba(17, 18, 20, 0.85),
-        0 24px 60px rgba(0, 0, 0, 0.62),
-        0 0 40px rgba(184, 149, 75, 0.28);
+      filter: drop-shadow(0 8px 28px rgba(184, 149, 75, 0.40));
     }
 
-    /* Gem images */
+    /* Gem images — forme naturelle de la pierre */
     .gem-circle img {
-      position: absolute;
-      inset: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
+      object-fit: contain;
       display: block;
+      border-radius: 0;
     }
 
     /* Gem text */
@@ -4565,22 +4548,6 @@
           </div>
         </article>
 
-        <article class="academy-module-card reveal" data-delay="160">
-          <div class="module-icon-wrap">
-            <svg viewBox="0 0 38 38" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 9a8 8 0 1 0 0 16"/>
-              <path d="M20 9c3-1 7 0 9 4s1 9-2 12l-7 6"/>
-              <path d="M13 30c0-2.5 3-4 6-4h4"/>
-              <circle cx="18" cy="18" r="1.5" fill="currentColor" stroke="none"/>
-              <path d="M23 16c1 1 1 4 0 5"/>
-            </svg>
-          </div>
-          <div class="module-body">
-            <h4>Leadership &amp; Développement</h4>
-            <p>Développer une vision à long terme, renforcer votre leadership et être accompagné dans la mise en œuvre de vos ambitions.</p>
-            <a href="#contact" class="module-explore">Explorer <span>→</span></a>
-          </div>
-        </article>
 
       </div>
     </div>
@@ -4594,10 +4561,10 @@
     <div class="token-hero">
       <div class="token-hero-inner">
 
-        <h2 class="reveal">Devenez acteur de l'écosystème.</h2>
+        <h2 class="reveal">$VLRA — En développement.</h2>
         <div class="section-sep reveal" data-delay="60"></div>
-        <p class="token-hero-lead reveal" data-delay="80">$VLRA est l'actif natif de Valora — conçu pour encoder l'appartenance, la gouvernance et la progression au sein de l'écosystème.</p>
-        <p class="token-hero-body reveal" data-delay="140">$VLRA incarne l'engagement du membre, l'accès progressif aux avantages de l'écosystème et la gouvernance communautaire. Un actif pensé comme un marqueur de progression, d'appartenance et de récompense.</p>
+        <p class="token-hero-lead reveal" data-delay="80">$VLRA est le token natif de Valora, actuellement en développement. La pré-sale sera bientôt disponible — les membres fondateurs y auront accès en priorité.</p>
+        <p class="token-hero-body reveal" data-delay="140">$VLRA est un actif d'utilité interne. Il ne constitue pas une valeur mobilière et ne peut être assimilé à un investissement financier.</p>
       </div>
     </div>
 
@@ -4621,13 +4588,15 @@
         <article class="academy-module-card reveal" data-delay="80">
           <div class="module-icon-wrap">
             <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="18" cy="11" r="7"/>
-              <path d="M 5 34 C 5 24 31 24 31 34"/>
+              <path d="M18 4 L28 10 L28 22 L18 28 L8 22 L8 10 Z"/>
+              <path d="M18 4 L18 28"/>
+              <path d="M8 10 L28 10"/>
+              <path d="M8 22 L28 22"/>
             </svg>
           </div>
           <div class="module-body">
-            <h4>Staking</h4>
-            <p>Bloquer des $VLRA pour générer des rendements passifs et accéder à des niveaux de récompense supérieurs.</p>
+            <h4>Allocation dans des projets</h4>
+            <p>Les $VLRA pourront être alloués dans des projets crypto naissants sélectionnés par Valora — pour devenir acteur et co-investisseur des projets de demain.</p>
             <a href="#contact" class="module-explore">Explorer <span>→</span></a>
           </div>
         </article>
@@ -4647,7 +4616,7 @@
       </div>
     </div>
 
-    <p class="token-disclaimer">Restez à l'écoute. Le lancement du $VLRA approche. — * $VLRA est un actif d'utilité interne. Il ne constitue pas une valeur mobilière et ne peut être assimilé à un investissement financier.</p>
+    <p class="token-disclaimer">⚠ $VLRA est en cours de développement. Pré-sale bientôt disponible — accès prioritaire réservé aux membres fondateurs. * $VLRA est un actif d'utilité interne. Il ne constitue pas une valeur mobilière.</p>
   </section>
 
   <!-- ============================================================
