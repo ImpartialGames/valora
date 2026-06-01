@@ -2078,13 +2078,14 @@
       filter: drop-shadow(0 8px 28px rgba(184, 149, 75, 0.40));
     }
 
-    /* Gem images forme naturelle de la pierre */
+    /* Gem images — mix-blend-mode screen : supprime le noir des .webp */
     .gem-circle img {
       width: 100%;
       height: 100%;
       object-fit: contain;
       display: block;
       border-radius: 0;
+      mix-blend-mode: screen;
     }
 
     /* Gem text */
