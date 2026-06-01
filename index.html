@@ -2089,10 +2089,13 @@
       border-radius: 0;
     }
 
-    /* Uniformisation taille — gems plus petites dans leur canvas */
-    .rank-perle .gem-circle img   { transform: scale(1.30); transform-origin: center; }
-    .rank-or .gem-circle img      { transform: scale(1.24); transform-origin: center; }
-    .rank-emeraude .gem-circle img { transform: scale(1.16); transform-origin: center; }
+    /* Uniformisation taille — Obsidiane = référence (scale 1.0)
+       Valeurs calibrées d'après occupation réelle dans le canvas 512×512 */
+    .rank-perle .gem-circle img    { transform: scale(1.30); transform-origin: center; }
+    .rank-diamant .gem-circle img  { transform: scale(1.14); transform-origin: center; }
+    .rank-emeraude .gem-circle img { transform: scale(1.22); transform-origin: center; }
+    .rank-saphir .gem-circle img   { transform: scale(1.14); transform-origin: center; }
+    .rank-or .gem-circle img       { transform: scale(1.22); transform-origin: center; }
 
     /* Gem text */
     .rank-roman {
