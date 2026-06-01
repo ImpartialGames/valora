@@ -3725,6 +3725,361 @@
     .roadmap-heading-accent {
       display: none !important;
     }
+
+    /* ============================================================
+       RESPONSIVE MOBILE — Audit complet (≤760px puis ≤480px)
+       Bloc final : l'emporte par cascade sur les règles existantes.
+    ============================================================ */
+    @media (max-width: 760px) {
+      /* --- Grilles de cartes → empilées --- */
+      .overview-grid,
+      .delta-strategies,
+      .comp-steps-inner,
+      .academy-cards-inner,
+      .token-cards-inner,
+      .roadmap-timeline {
+        grid-template-columns: 1fr !important;
+      }
+
+      .eco-card-grid {
+        grid-template-columns: 1fr 1fr !important;
+      }
+
+      /* --- Barres en grille → empilées --- */
+      .overview-bottom,
+      .roadmap-footer {
+        grid-template-columns: 1fr !important;
+        gap: 16px;
+        text-align: center;
+      }
+
+      .delta-bottom-bar,
+      .comp-bottom-bar {
+        grid-template-columns: 1fr !important;
+        gap: 14px;
+        text-align: center;
+        justify-items: center;
+      }
+
+      /* --- Boutons hero → pleine largeur, empilés --- */
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 14px;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      /* --- Ticker métriques → compact --- */
+      .ticker-item {
+        font-size: 9px;
+        padding: 0 16px;
+        letter-spacing: 0.16em;
+      }
+
+      /* --- Section backers → label au-dessus, centré --- */
+      .backers-inner {
+        grid-template-columns: 1fr !important;
+        gap: 22px;
+        text-align: center;
+      }
+
+      .backers-label p {
+        text-align: center;
+      }
+
+      .backers-brand {
+        padding: 0 24px;
+      }
+
+      /* --- Gems (Rangs) → wrap pour éviter le débordement --- */
+      .ranks-gems {
+        flex-wrap: wrap;
+        gap: 28px 18px;
+      }
+
+      .ranks-gems::before {
+        display: none;
+      }
+
+      /* --- Trust (Accès) → empilé verticalement --- */
+      .access-trust {
+        grid-template-columns: 1fr !important;
+        gap: 0;
+        max-width: 340px;
+      }
+
+      .access-trust-item {
+        padding: 16px 0;
+        justify-content: center;
+        text-align: left;
+      }
+
+      .access-trust-item + .access-trust-item {
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding-left: 0;
+      }
+
+      /* --- Séparateurs : marge verticale réduite --- */
+      .section-sep,
+      .ranks-separator,
+      .eco-left-sep,
+      .access-line {
+        margin: 18px auto;
+      }
+
+      /* --- Paddings horizontaux des sections (anti-débordement) --- */
+      .valora-overview,
+      .valora-delta,
+      .valora-academy,
+      .valora-token,
+      .valora-compensation,
+      .valora-ranks,
+      .valora-ecosystem,
+      .valora-roadmap {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .overview-inner,
+      .delta-inner,
+      .roadmap-inner,
+      .academy-cards-inner,
+      .token-cards-inner,
+      .comp-steps-inner,
+      .eco-inner,
+      .access-inner,
+      .backers-inner {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      /* --- Cartes : padding interne réduit --- */
+      .overview-card,
+      .strategy-card,
+      .academy-module-card,
+      .comp-step-card,
+      .eco-card,
+      .roadmap-step,
+      .access-form-card {
+        padding: 24px 20px;
+      }
+
+      /* --- Anti-débordement global --- */
+      .delta-transparency-card {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      /* Eco cards → 1 colonne sur petit écran */
+      .eco-card-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      /* Header plus serré */
+      .valora-header {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      /* Ticker encore plus compact */
+      .ticker-item {
+        font-size: 8.5px;
+        padding: 0 12px;
+      }
+
+      /* Form card padding */
+      .access-form-card {
+        padding: 28px 20px;
+      }
+    }
+
+    /* Sécurité globale : pas de scroll horizontal */
+    html, body {
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+
+    /* ============================================================
+       MENU MOBILE — Hamburger + Drawer
+    ============================================================ */
+    .nav-burger {
+      display: none;
+      justify-self: end;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 44px;
+      height: 44px;
+      padding: 0 9px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 210;
+    }
+
+    .nav-burger span {
+      display: block;
+      height: 1.5px;
+      width: 100%;
+      background: var(--dark-text);
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.25s ease;
+    }
+
+    .valora-header.menu-open .nav-burger span:nth-child(1) {
+      transform: translateY(6.5px) rotate(45deg);
+    }
+    .valora-header.menu-open .nav-burger span:nth-child(2) {
+      opacity: 0;
+    }
+    .valora-header.menu-open .nav-burger span:nth-child(3) {
+      transform: translateY(-6.5px) rotate(-45deg);
+    }
+
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+    }
+
+    .mobile-menu[hidden] {
+      display: none;
+    }
+
+    .mobile-menu-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(8, 9, 11, 0.55);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      opacity: 0;
+      transition: opacity 0.34s ease;
+    }
+
+    .mobile-menu.is-open .mobile-menu-backdrop {
+      opacity: 1;
+    }
+
+    .mobile-menu-panel {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: min(360px, 86vw);
+      padding: 28px 30px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      background: rgba(17, 18, 20, 0.96);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      border-left: 1px solid var(--glass-2-border);
+      box-shadow: -30px 0 80px rgba(0, 0, 0, 0.5);
+      transform: translateX(100%);
+      transition: transform 0.40s cubic-bezier(0.22, 0.6, 0.36, 1);
+      overflow-y: auto;
+    }
+
+    .mobile-menu.is-open .mobile-menu-panel {
+      transform: translateX(0);
+    }
+
+    .mobile-menu-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 26px;
+    }
+
+    .mobile-menu-brand {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 26px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      color: var(--dark-text);
+    }
+
+    .mobile-menu-close {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: none;
+      color: var(--dark-text);
+      font-size: 30px;
+      line-height: 1;
+      cursor: pointer;
+      transition: color 0.22s ease;
+    }
+
+    .mobile-menu-close:hover {
+      color: var(--gold);
+    }
+
+    .mobile-menu-panel a {
+      color: var(--dark-text);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      transition: color 0.22s ease, padding-left 0.22s ease;
+    }
+
+    .mobile-menu-panel a:hover {
+      color: var(--gold);
+      padding-left: 6px;
+    }
+
+    .mobile-menu-cta {
+      margin-top: 22px;
+      display: inline-flex !important;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      background: var(--gold);
+      color: var(--black) !important;
+      border-radius: 999px;
+      padding: 16px 24px !important;
+      border-bottom: none !important;
+    }
+
+    .mobile-menu-cta:hover {
+      color: var(--black) !important;
+      padding-left: 24px !important;
+      background: rgba(184, 149, 75, 0.88);
+    }
+
+    .mobile-menu-cta span {
+      font-size: 18px;
+    }
+
+    /* Affichage du burger là où la nav centrale disparaît */
+    @media (max-width: 1100px) {
+      .nav-burger {
+        display: flex;
+      }
+      .valora-header .nav-contact {
+        display: none;
+      }
+    }
+
+    /* Sur drawer ouvert, masquer le burger sous le panneau si besoin */
+    body.menu-locked {
+      overflow: hidden;
+    }
   </style>
 </head>
 <body>
@@ -3750,7 +4105,32 @@
       </nav>
 
       <a href="#contact" class="nav-contact"><span>Demander mon accès</span></a>
+
+      <button class="nav-burger" id="navBurger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </header>
+
+    <!-- Menu mobile -->
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu de navigation" hidden>
+      <div class="mobile-menu-backdrop" data-close></div>
+      <nav class="mobile-menu-panel" aria-label="Navigation mobile">
+        <div class="mobile-menu-head">
+          <span class="mobile-menu-brand">VALORA</span>
+          <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Fermer le menu">&times;</button>
+        </div>
+        <a href="#apropos" data-close>Vision</a>
+        <a href="#strategies" data-close>Stratégies</a>
+        <a href="#academy" data-close>Academy</a>
+        <a href="#token" data-close>$VLRA</a>
+        <a href="#remuneration" data-close>Rémunération</a>
+        <a href="#rangs" data-close>Rangs</a>
+        <a href="#contact" data-close>Accès</a>
+        <a href="#contact" class="mobile-menu-cta" data-close>Demander mon accès <span>→</span></a>
+      </nav>
+    </div>
 
     <div class="hero-inner">
       <div class="hero-content">
@@ -4839,6 +5219,66 @@
           ticking = true;
         }
       }, { passive: true });
+    })();
+
+    /* ---- Menu mobile : toggle + focus trap + ESC + clic extérieur ---- */
+    ;(function () {
+      var burger = document.getElementById('navBurger');
+      var menu   = document.getElementById('mobileMenu');
+      var header = document.querySelector('.valora-header');
+      if (!burger || !menu || !header) return;
+      var panel   = menu.querySelector('.mobile-menu-panel');
+      var closeBtn = document.getElementById('mobileMenuClose');
+      var lastFocused = null;
+
+      function focusable() {
+        return panel.querySelectorAll('a[href], button:not([disabled])');
+      }
+
+      function openMenu() {
+        lastFocused = document.activeElement;
+        menu.hidden = false;
+        void menu.offsetWidth; /* reflow pour la transition */
+        menu.classList.add('is-open');
+        header.classList.add('menu-open');
+        document.body.classList.add('menu-locked');
+        burger.setAttribute('aria-expanded', 'true');
+        burger.setAttribute('aria-label', 'Fermer le menu');
+        var f = focusable();
+        if (f.length) f[0].focus();
+        document.addEventListener('keydown', onKeydown);
+      }
+
+      function closeMenu() {
+        menu.classList.remove('is-open');
+        header.classList.remove('menu-open');
+        document.body.classList.remove('menu-locked');
+        burger.setAttribute('aria-expanded', 'false');
+        burger.setAttribute('aria-label', 'Ouvrir le menu');
+        document.removeEventListener('keydown', onKeydown);
+        window.setTimeout(function () { menu.hidden = true; }, 420);
+        if (lastFocused && lastFocused.focus) lastFocused.focus();
+      }
+
+      function onKeydown(e) {
+        if (e.key === 'Escape') { closeMenu(); return; }
+        if (e.key === 'Tab') {
+          var f = focusable();
+          if (!f.length) return;
+          var first = f[0], last = f[f.length - 1];
+          if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault(); last.focus();
+          } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault(); first.focus();
+          }
+        }
+      }
+
+      burger.addEventListener('click', openMenu);
+      if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+      menu.addEventListener('click', function (e) {
+        if (e.target.closest('[data-close]')) closeMenu();
+      });
     })();
   </script>
 
