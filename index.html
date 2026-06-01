@@ -2062,6 +2062,8 @@
       position: relative;
       flex-shrink: 0;
       background: transparent;
+      border-radius: 50%;
+      overflow: hidden;
       transition: transform 0.32s ease, filter 0.32s ease;
     }
 
@@ -2086,6 +2088,11 @@
       display: block;
       border-radius: 0;
     }
+
+    /* Uniformisation taille — gems plus petites dans leur canvas */
+    .rank-perle .gem-circle img   { transform: scale(1.30); transform-origin: center; }
+    .rank-or .gem-circle img      { transform: scale(1.24); transform-origin: center; }
+    .rank-emeraude .gem-circle img { transform: scale(1.16); transform-origin: center; }
 
     /* Gem text */
     .rank-roman {
