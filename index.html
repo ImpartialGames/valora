@@ -75,7 +75,13 @@
     .valora-academy,
     .valora-token,
     .valora-compensation,
-    .valora-ecosystem {
+    .valora-ecosystem,
+    .valora-vision,
+    .valora-principles,
+    .valora-team,
+    .valora-belonging,
+    .valora-pricing,
+    .valora-ecosystem-pillars {
       box-shadow: none;
     }
 
@@ -3367,8 +3373,14 @@
     .valora-compensation,
     .valora-ranks,
     .valora-ecosystem,
+    .valora-ecosystem-pillars,
     .valora-roadmap,
-    .valora-access {
+    .valora-access,
+    .valora-vision,
+    .valora-principles,
+    .valora-team,
+    .valora-belonging,
+    .valora-pricing {
       -webkit-mask-image: linear-gradient(
         to bottom,
         transparent           0px,
@@ -3432,6 +3444,741 @@
     .valora-compensation::after,
     .valora-access::after {
       display: none;
+    }
+
+    /* ============================================================
+       SECTION A — VISION FONDATRICE
+    ============================================================ */
+    .valora-vision {
+      position: relative;
+      background: var(--dark-bg);
+      padding: clamp(72px, 7vw, 110px) clamp(32px, 4.5vw, 72px);
+      isolation: isolate;
+    }
+    .valora-vision::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(184, 149, 75, 0.04), transparent 70%);
+      pointer-events: none;
+    }
+    .vision-inner {
+      width: min(860px, 100%);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: clamp(32px, 3.5vw, 52px);
+    }
+    .vision-heading h2 {
+      margin: 0;
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: clamp(32px, 3.6vw, 54px);
+      line-height: 1.12;
+      font-weight: 400;
+      letter-spacing: -0.04em;
+      color: var(--dark-text);
+    }
+    .vision-quote {
+      margin: 0;
+      padding: clamp(28px, 3vw, 44px) clamp(32px, 4vw, 56px);
+      background: var(--glass-2-bg);
+      border: 1px solid var(--glass-2-border);
+      border-left: 3px solid rgba(184, 149, 75, 0.52);
+      border-radius: var(--radius);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: var(--glass-inset), 0 24px 60px rgba(0, 0, 0, 0.28);
+      text-align: left;
+    }
+    .vision-quote p {
+      margin: 0;
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: clamp(18px, 1.6vw, 26px);
+      line-height: 1.65;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--dark-text);
+      letter-spacing: -0.01em;
+    }
+    .vision-pillars {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      width: 100%;
+    }
+    .vision-pillar {
+      padding: 20px 18px;
+      background: var(--glass-1-bg);
+      border: 1px solid var(--glass-1-border);
+      border-radius: var(--radius);
+      box-shadow: var(--glass-inset), 0 16px 40px rgba(0, 0, 0, 0.22);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      text-align: center;
+    }
+    .vision-pillar-icon {
+      color: var(--gold);
+      font-size: 10px;
+      opacity: 0.75;
+    }
+    .vision-pillar p {
+      margin: 0;
+      color: var(--dark-muted);
+      font-size: clamp(12px, 0.95vw, 14px);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    /* ============================================================
+       SECTION B — NOS PRINCIPES
+    ============================================================ */
+    .valora-principles {
+      position: relative;
+      background: var(--dark-bg);
+      padding: clamp(60px, 5.5vw, 88px) clamp(32px, 4.5vw, 72px);
+      isolation: isolate;
+    }
+    .principles-inner {
+      width: min(1280px, 100%);
+      margin: 0 auto;
+    }
+    .principles-heading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: clamp(36px, 4vw, 56px);
+    }
+    .principles-heading h2 {
+      margin: 0;
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: clamp(32px, 3.6vw, 54px);
+      line-height: 1.12;
+      font-weight: 400;
+      letter-spacing: -0.04em;
+      color: var(--dark-text);
+    }
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .principle-card {
+      padding: clamp(28px, 3vw, 44px) clamp(24px, 2.5vw, 36px);
+      background: var(--glass-1-bg);
+      border: 1px solid var(--glass-1-border);
+      border-radius: var(--radius);
+      box-shadow: var(--glass-inset), 0 20px 56px rgba(0, 0, 0, 0.28);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transition: border-color 0.26s ease, transform 0.26s ease;
+    }
+    .principle-card:hover {
+      border-color: var(--dark-border-hover);
+      transform: translateY(-4px);
+      box-shadow: var(--glass-inset), 0 0 0 1px rgba(184, 149, 75, 0.22), 0 28px 72px rgba(0, 0, 0, 0.38);
+    }
+    .principle-num {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 42px;
+      font-weight: 400;
+      color: rgba(184, 149, 75, 0.28);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+    .principle-body h3 {
+      margin: 0 0 14px;
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: clamp(20px, 1.7vw, 28px);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: var(--dark-text);
+      line-height: 1.15;
+    }
+    .principle-body p {
+      margin: 0;
+      color: var(--dark-muted);
+      font-size: clamp(13px, 1vw, 15px);
+      line-height: 1.82;
+      font-weight: 300;
+    }
+
+    /* ============================================================
+       SECTION C — L'ÉCOSYSTÈME VALORA (6 PILIERS)
+    ============================================================ */
+    .valora-ecosystem-pillars {
+      position: relative;
+      background: var(--dark-bg);
+      padding: clamp(72px, 6vw, 100px) clamp(32px, 4.5vw, 72px);
+      isolation: isolate;
+    }
+    .valora-ecosystem-pillars::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% 0%, rgba(184, 149, 75, 0.05), transparent 65%),
+        radial-gradient(ellipse 60% 40% at 50% 100%, rgba(184, 149, 75, 0.03), transparent 60%);
+      pointer-events: none;
+    }
+    .ep-inner {
+      width: min(1420px, 100%);
+      margin: 0 auto;
+    }
+    .ep-heading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: clamp(42px, 5vw, 68px);
+    }
+    .ep-heading h2 {
+      margin: 0;
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: clamp(32px, 3.6vw, 54px);
+      line-height: 1.12;
+      font-weight: 400;
+      letter-spacing: -0.04em;
+      color: var(--dark-text);
+    }
+    .ep-heading p {
+      margin: 0;
+      color: var(--dark-muted);
+      font-size: clamp(14px, 1.1vw, 17px);
+      font-weight: 300;
+      line-height: 1.75;
+      max-width: 520px;
+    }
+    .ep-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .ep-card {
+      padding: clamp(28px, 3vw, 44px) clamp(22px, 2.2vw, 34px);
+      background: var(--glass-1-bg);
+      border: 1px solid var(--glass-1-border);
+      border-radius: var(--radius);
+      box-shadow: var(--glass-inset), 0 20px 56px rgba(0, 0, 0, 0.26);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: border-color 0.26s ease, transform 0.26s ease, box-shadow 0.26s ease;
+    }
+    .ep-card:hover {
+      border-color: var(--dark-border-hover);
+      transform: translateY(-4px);
+      box-shadow: var(--glass-inset), 0 0 0 1px rgba(184, 149, 75, 0.22), 0 28px 72px rgba(0, 0, 0, 0.36);
+    }
+    .ep-card-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      width: fit-content;
+    }
+    .ep-card-status::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+      box-shadow: 0 0 8px rgba(184, 149, 75, 0.55);
+    }
+    .ep-card-status--dev {
+      color: var(--dark-muted);
+    }
+    .ep-card-status--dev::before {
+      background: var(--dark-muted);
+      box-shadow: none;
+    }
+    .ep-card h3 {
+      margin: 0;
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: clamp(20px, 1.7vw, 28px);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: var(--dark-text);
+      line-height: 1.15;
+    }
+    .ep-card p {
+      margin: 0;
+      color: var(--dark-muted);
+      font-size: clamp(12.5px, 0.95vw, 14.5px);
+      line-height: 1.78;
+      font-weight: 300;
+    }
+
+    /* ============================================================
+       SECTION D — L'ÉQUIPE FONDATRICE
+    ============================================================ */
+    .valora-team {
+      position: relative;
+      background: var(--dark-bg);
+      padding: clamp(52px, 4.5vw, 72px) clamp(32px, 4.5vw, 72px);
+      isolation: isolate;
+    }
+    .team-inner {
+      width: min(1200px, 100%);
+      margin: 0 auto;
+    }
+    .team-heading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: clamp(28px, 3.5vw, 44px);
+    }
+    .team-heading h2 {
+      margin: 0;
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: clamp(28px, 3vw, 46px);
+      line-height: 1.12;
+      font-weight: 400;
+      letter-spacing: -0.04em;
+      color: var(--dark-text);
+    }
+    .team-heading p {
+      margin: 0;
+      color: var(--dark-muted);
+      font-size: clamp(13px, 1vw, 15px);
+      font-weight: 300;
+      line-height: 1.75;
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    /* Layout horizontal : photo gauche, bio droite */
+    .team-card {
+      background: var(--glass-1-bg);
+      border: 1px solid var(--glass-1-border);
+      border-radius: var(--radius);
+      box-shadow: var(--glass-inset), 0 20px 52px rgba(0, 0, 0, 0.28);
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      transition: border-color 0.26s ease, transform 0.26s ease;
+    }
+    .team-card:hover {
+      border-color: var(--dark-border-hover);
+      transform: translateY(-3px);
+    }
+    .team-photo-wrap {
+      width: 220px;
+      flex-shrink: 0;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.04);
+    }
+    .team-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 15%;
+      display: block;
+      transition: transform 0.48s ease;
+    }
+    .team-card:hover .team-photo {
+      transform: scale(1.04);
+    }
+    .team-bio {
+      padding: clamp(20px, 2vw, 28px) clamp(20px, 2vw, 28px);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1;
+      min-width: 0;
+    }
+    .team-meta h3 {
+      margin: 0 0 5px;
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: clamp(20px, 1.7vw, 26px);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: var(--dark-text);
+      line-height: 1.1;
+    }
+    .team-title {
+      margin: 0;
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .team-sep {
+      width: 32px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      flex-shrink: 0;
+    }
+    .team-bio > p {
+      margin: 0;
+      color: var(--dark-muted);
+      font-size: clamp(12px, 0.9vw, 13.5px);
+      line-height: 1.78;
+      font-weight: 300;
+    }
+    .team-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 2px;
+    }
+    .team-tag {
+      display: inline-flex;
+      padding: 4px 10px;
+      border: 1px solid var(--glass-2-border);
+      border-radius: 999px;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--dark-muted);
+      background: var(--glass-1-bg);
+    }
+
+    /* ============================================================
+       SECTION E — CE QUE SIGNIFIE APPARTENIR
+    ============================================================ */
+    .valora-belonging {
+      position: relative;
+      background: var(--dark-bg);
+      padding: clamp(72px, 6vw, 100px) clamp(32px, 4.5vw, 72px);
+      isolation: isolate;
+    }
+    .belonging-inner {
+      width: min(840px, 100%);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: clamp(28px, 3vw, 42px);
+    }
+    .belonging-heading h2 {
+      margin: 0;
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: clamp(32px, 3.6vw, 54px);
+      line-height: 1.12;
+      font-weight: 400;
+      letter-spacing: -0.04em;
+      color: var(--dark-text);
+    }
+    .belonging-content {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      max-width: 680px;
+    }
+    .belonging-content p {
+      margin: 0;
+      color: var(--dark-muted);
+      font-size: clamp(14px, 1.1vw, 17px);
+      line-height: 1.88;
+      font-weight: 300;
+    }
+    .belonging-callout {
+      width: 100%;
+      max-width: 640px;
+      padding: clamp(24px, 2.5vw, 36px) clamp(28px, 3vw, 48px);
+      background: var(--glass-2-bg);
+      border: 1px solid var(--glass-2-border);
+      border-radius: var(--radius);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: var(--glass-inset), 0 24px 60px rgba(0, 0, 0, 0.32);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .belonging-callout-label {
+      margin: 0;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .belonging-callout-values {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .belonging-callout-values span {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: clamp(22px, 2vw, 32px);
+      font-weight: 500;
+      color: var(--dark-text);
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+    .belonging-dot {
+      color: var(--gold) !important;
+      font-size: 10px !important;
+      font-family: "Montserrat", sans-serif !important;
+      opacity: 0.65;
+    }
+    .belonging-footnote {
+      margin: 0;
+      font-size: clamp(12px, 0.95vw, 14px);
+      color: var(--dark-muted-soft);
+      font-weight: 300;
+      font-style: italic;
+      letter-spacing: 0.04em;
+    }
+
+    /* ============================================================
+       SECTION F — ADHÉSION À VIE (PRICING)
+    ============================================================ */
+    .valora-pricing {
+      position: relative;
+      background: var(--dark-bg);
+      padding: clamp(72px, 6vw, 100px) clamp(32px, 4.5vw, 72px);
+      isolation: isolate;
+    }
+    .pricing-inner {
+      width: min(1420px, 100%);
+      margin: 0 auto;
+    }
+    .pricing-heading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: clamp(42px, 5vw, 68px);
+    }
+    .pricing-heading h2 {
+      margin: 0;
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: clamp(32px, 3.6vw, 54px);
+      line-height: 1.12;
+      font-weight: 400;
+      letter-spacing: -0.04em;
+      color: var(--dark-text);
+    }
+    .pricing-heading p {
+      margin: 0;
+      color: var(--dark-muted);
+      font-size: clamp(14px, 1.1vw, 17px);
+      font-weight: 300;
+      line-height: 1.75;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+    .pricing-card {
+      position: relative;
+      background: var(--glass-1-bg);
+      border: 1px solid var(--glass-1-border);
+      border-radius: var(--radius);
+      box-shadow: var(--glass-inset), 0 20px 56px rgba(0, 0, 0, 0.28);
+      padding: clamp(28px, 3vw, 40px) clamp(22px, 2.2vw, 32px);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      transition: border-color 0.26s ease, transform 0.26s ease, box-shadow 0.26s ease;
+    }
+    .pricing-card:hover {
+      border-color: var(--dark-border-hover);
+      transform: translateY(-4px);
+      box-shadow: var(--glass-inset), 0 0 0 1px rgba(184, 149, 75, 0.22), 0 28px 72px rgba(0, 0, 0, 0.36);
+    }
+    .pricing-card--featured {
+      background: linear-gradient(160deg, rgba(184, 149, 75, 0.10) 0%, rgba(255, 255, 255, 0.04) 60%, rgba(255, 255, 255, 0.03) 100%);
+      border-color: rgba(184, 149, 75, 0.42);
+      box-shadow: var(--glass-inset), 0 0 0 1px rgba(184, 149, 75, 0.18), 0 28px 72px rgba(0, 0, 0, 0.34);
+    }
+    .pricing-card--featured:hover {
+      border-color: rgba(184, 149, 75, 0.62);
+      box-shadow: var(--glass-inset), 0 0 0 1px rgba(184, 149, 75, 0.32), 0 36px 90px rgba(184, 149, 75, 0.10);
+    }
+    .pricing-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--black);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .pricing-card-head {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .pricing-card-head h3 {
+      margin: 0;
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: clamp(26px, 2.2vw, 36px);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      color: var(--dark-text);
+      line-height: 1;
+    }
+    .pricing-price {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+    .pricing-amount {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: clamp(38px, 3.5vw, 56px);
+      font-weight: 400;
+      color: var(--gold);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+    .pricing-currency {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: clamp(20px, 1.8vw, 28px);
+      color: var(--gold);
+      font-weight: 400;
+      line-height: 1;
+    }
+    .pricing-desc {
+      margin: 0;
+      color: var(--dark-muted);
+      font-size: clamp(12px, 0.9vw, 13.5px);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+    .pricing-features {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+    .pricing-features li {
+      position: relative;
+      padding-left: 20px;
+      color: var(--dark-muted);
+      font-size: clamp(12px, 0.9vw, 13.5px);
+      line-height: 1.6;
+      font-weight: 300;
+    }
+    .pricing-features li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+    .pricing-features li.pricing-feature-header {
+      padding-left: 0;
+      color: var(--dark-text);
+      font-weight: 500;
+      font-size: clamp(11px, 0.85vw, 12.5px);
+      letter-spacing: 0.04em;
+    }
+    .pricing-features li.pricing-feature-header::before {
+      display: none;
+    }
+    .pricing-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 14px 20px;
+      background: transparent;
+      border: 1px solid var(--glass-2-border);
+      border-radius: 999px;
+      color: var(--dark-text);
+      text-decoration: none;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      transition: background 0.24s ease, border-color 0.24s ease, color 0.24s ease;
+      margin-top: auto;
+    }
+    .pricing-cta:hover {
+      background: var(--glass-2-bg);
+      border-color: rgba(184, 149, 75, 0.42);
+      color: var(--gold);
+    }
+    .pricing-cta--gold {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--black);
+    }
+    .pricing-cta--gold:hover {
+      background: rgba(184, 149, 75, 0.88);
+      border-color: transparent;
+      color: var(--black);
+    }
+    .pricing-footnote {
+      text-align: center;
+      margin: clamp(22px, 2.5vw, 36px) 0 0;
+      color: var(--dark-muted-soft);
+      font-size: 12px;
+      font-weight: 300;
+      font-style: italic;
+      letter-spacing: 0.04em;
+    }
+
+    /* ============================================================
+       RESPONSIVE — Nouvelles sections
+    ============================================================ */
+    @media (max-width: 1200px) {
+      .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+      .ep-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 960px) {
+      .principles-grid { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 760px) {
+      .valora-vision,
+      .valora-principles,
+      .valora-team,
+      .valora-belonging,
+      .valora-pricing,
+      .valora-ecosystem-pillars { padding-left: 20px; padding-right: 20px; }
+      .vision-pillars { grid-template-columns: 1fr 1fr; }
+      .vision-quote { padding: 24px 22px; }
+      .ep-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      /* Sur mobile : la carte redevient verticale */
+      .team-card { flex-direction: column; }
+      .team-photo-wrap { width: 100%; height: 260px; }
+      .belonging-callout { padding: 22px 20px; }
+    }
+    @media (max-width: 480px) {
+      .vision-pillars { grid-template-columns: 1fr; }
+      .team-photo-wrap { height: 220px; }
     }
 
     /* ============================================================
@@ -3944,7 +4691,7 @@
       .valora-token,
       .valora-compensation,
       .valora-ranks,
-      .valora-ecosystem,
+      .valora-ecosystem-pillars,
       .valora-roadmap {
         padding-left: 20px;
         padding-right: 20px;
@@ -4305,6 +5052,84 @@
   </div>
 
   <!-- ============================================================
+       A — VISION FONDATRICE
+  ============================================================ -->
+  <section class="valora-vision" id="vision">
+    <div class="vision-inner">
+
+      <div class="vision-heading">
+        <h2 class="reveal">Un cercle. Pas un produit.</h2>
+        <div class="section-sep reveal" data-delay="60"></div>
+      </div>
+
+      <blockquote class="vision-quote reveal" data-delay="100">
+        <p>« Il existe des opportunités que le grand public n'atteindra jamais — non par manque de moyens, mais par manque d'accès. Valora n'existe pas pour vendre un accès. Elle existe pour rassembler ceux qui comprennent que la richesse durable se construit dans la discrétion, la méthode et la communauté. »</p>
+      </blockquote>
+
+      <div class="vision-pillars reveal" data-delay="160">
+        <div class="vision-pillar">
+          <span class="vision-pillar-icon">◆</span>
+          <p>Stratégies institutionnelles accessibles</p>
+        </div>
+        <div class="vision-pillar">
+          <span class="vision-pillar-icon">◆</span>
+          <p>Opportunités sélectionnées avec rigueur</p>
+        </div>
+        <div class="vision-pillar">
+          <span class="vision-pillar-icon">◆</span>
+          <p>Communauté fondée sur la confiance</p>
+        </div>
+        <div class="vision-pillar">
+          <span class="vision-pillar-icon">◆</span>
+          <p>Éducation au service de l'indépendance</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       B — NOS PRINCIPES
+  ============================================================ -->
+  <section class="valora-principles" id="principes">
+    <div class="principles-inner">
+
+      <div class="principles-heading">
+        <h2 class="reveal">Ce qui nous distingue.</h2>
+        <div class="section-sep reveal" data-delay="60"></div>
+      </div>
+
+      <div class="principles-grid">
+
+        <article class="principle-card reveal" data-delay="0">
+          <div class="principle-num">01</div>
+          <div class="principle-body">
+            <h3>L'accès avant tout</h3>
+            <p>Valora n'est pas une offre ouverte. Chaque membre intègre un cercle construit sur la confiance, la sélection et l'alignement des valeurs. L'accès n'est pas un droit — c'est une reconnaissance.</p>
+          </div>
+        </article>
+
+        <article class="principle-card reveal" data-delay="100">
+          <div class="principle-num">02</div>
+          <div class="principle-body">
+            <h3>Un réseau qui amplifie</h3>
+            <p>Ici, les connexions ont de la valeur. Les membres Valora évoluent dans un environnement où chaque rencontre peut devenir une opportunité, une alliance ou un levier de croissance.</p>
+          </div>
+        </article>
+
+        <article class="principle-card reveal" data-delay="200">
+          <div class="principle-num">03</div>
+          <div class="principle-body">
+            <h3>Construire dans la durée</h3>
+            <p>La performance court-terme ne nous intéresse pas seule. Valora est construit pour ceux qui pensent en décennies — des structures solides, des stratégies éprouvées, une vision pérenne.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
        02 VALORA EN UN COUP D'ŒIL
   ============================================================ -->
   <section class="valora-overview" id="apropos">
@@ -4631,6 +5456,64 @@
   </section>
 
   <!-- ============================================================
+       D — L'ÉQUIPE FONDATRICE
+  ============================================================ -->
+  <section class="valora-team" id="equipe">
+    <div class="team-inner">
+
+      <div class="team-heading">
+        <h2 class="reveal">Construit par des gens qui comprennent.</h2>
+        <div class="section-sep reveal" data-delay="60"></div>
+        <p class="reveal" data-delay="100">Deux fondateurs. Une vision commune. Une exécution sans compromis.</p>
+      </div>
+
+      <div class="team-grid">
+
+        <article class="team-card reveal" data-delay="0">
+          <div class="team-photo-wrap">
+            <img src="./Alexis Delhotal.webp" alt="Alexis Delhotal, Co-fondateur &amp; Directeur Général" class="team-photo" loading="lazy" />
+          </div>
+          <div class="team-bio">
+            <div class="team-meta">
+              <h3>Alexis Delhotal</h3>
+              <p class="team-title">CO-FONDATEUR &amp; DIRECTEUR GÉNÉRAL</p>
+            </div>
+            <div class="team-sep"></div>
+            <p>Issu de la banque en gestion de patrimoine, Alexis a exercé en tant que conseiller Société Générale auprès d'une clientèle fortunée. Certifié AMF, diplômé de Paris School of Business en Gestion de Patrimoine et co-fondateur de MCaisse, il dirige aujourd'hui le développement global de l'écosystème Valora et sa stratégie.</p>
+            <div class="team-tags">
+              <span class="team-tag">Gestion de patrimoine</span>
+              <span class="team-tag">Certifié AMF</span>
+              <span class="team-tag">Banque privée</span>
+              <span class="team-tag">Entrepreneuriat</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="team-card reveal" data-delay="120">
+          <div class="team-photo-wrap">
+            <img src="./Marie Maille.webp" alt="Marie Maille, Co-fondatrice &amp; Directrice des Opérations" class="team-photo" loading="lazy" />
+          </div>
+          <div class="team-bio">
+            <div class="team-meta">
+              <h3>Marie Maille</h3>
+              <p class="team-title">CO-FONDATRICE &amp; DIRECTRICE DES OPÉRATIONS</p>
+            </div>
+            <div class="team-sep"></div>
+            <p>Analyste en stratégies d'investissement alternatif au sein d'un family office parisien, Marie possède 8 ans d'expérience dans la structuration de portefeuilles familiaux multi-actifs. Spécialiste des actifs réels et de la diversification patrimoniale, elle pilote le développement des piliers Real Assets et Ventures.</p>
+            <div class="team-tags">
+              <span class="team-tag">Investissement alternatif</span>
+              <span class="team-tag">Family office</span>
+              <span class="team-tag">Actifs réels</span>
+              <span class="team-tag">Multi-actifs</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
        06 PLAN DE RÉMUNÉRATION
   ============================================================ -->
   <section class="valora-compensation" id="remuneration">
@@ -4711,6 +5594,135 @@
       </div>
     </div>
 
+  </section>
+
+  <!-- ============================================================
+       E — CE QUE SIGNIFIE APPARTENIR
+  ============================================================ -->
+  <section class="valora-belonging" id="appartenir">
+    <div class="belonging-inner">
+
+      <div class="belonging-heading">
+        <h2 class="reveal">L'appartenance avant tout.</h2>
+        <div class="section-sep reveal" data-delay="60"></div>
+      </div>
+
+      <div class="belonging-content reveal" data-delay="100">
+        <p>Rejoindre Valora, ce n'est pas souscrire à un service. C'est intégrer un cercle. Cela signifie accéder à une intelligence collective, à des stratégies élaborées pour vous, et à une communauté qui avance dans la même direction.</p>
+        <p>Ici, vous n'êtes pas un numéro. Vous êtes un membre — avec tout ce que cela implique en termes de responsabilités, d'avantages et d'appartenance.</p>
+      </div>
+
+      <div class="belonging-callout reveal" data-delay="180">
+        <p class="belonging-callout-label">Nos engagements fondamentaux</p>
+        <div class="belonging-callout-values">
+          <span>Performance.</span>
+          <span class="belonging-dot">◆</span>
+          <span>Sécurité.</span>
+          <span class="belonging-dot">◆</span>
+          <span>Transparence.</span>
+        </div>
+      </div>
+
+      <p class="belonging-footnote reveal" data-delay="240">Adhésion unique. Aucun abonnement récurrent. Un investissement en vous-même.</p>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       F — ADHÉSION À VIE (PRICING)
+  ============================================================ -->
+  <section class="valora-pricing" id="adhesion">
+    <div class="pricing-inner">
+
+      <div class="pricing-heading">
+        <h2 class="reveal">Choisissez votre cercle.</h2>
+        <div class="section-sep reveal" data-delay="60"></div>
+        <p class="reveal" data-delay="100">Un accès unique. Un investissement en vous-même. Aucun frais récurrent.</p>
+      </div>
+
+      <div class="pricing-grid">
+
+        <article class="pricing-card reveal" data-delay="0">
+          <div class="pricing-card-head">
+            <h3>Explorer</h3>
+            <div class="pricing-price">
+              <span class="pricing-amount">49</span><span class="pricing-currency">€</span>
+            </div>
+            <p class="pricing-desc">Découvrez l'écosystème Valora. Premier pas vers le cercle.</p>
+          </div>
+          <ul class="pricing-features">
+            <li class="pricing-feature-header">Accès inclus :</li>
+            <li>Accès plateforme et dashboard</li>
+            <li>Communications officielles du cercle</li>
+            <li>Parrainage direct niveau 1</li>
+            <li>Support par email</li>
+          </ul>
+          <a href="#contact" class="pricing-cta">Rejoindre <span>→</span></a>
+        </article>
+
+        <article class="pricing-card reveal" data-delay="80">
+          <div class="pricing-card-head">
+            <h3>Investor</h3>
+            <div class="pricing-price">
+              <span class="pricing-amount">499</span><span class="pricing-currency">€</span>
+            </div>
+            <p class="pricing-desc">Accédez aux stratégies et à la formation complète.</p>
+          </div>
+          <ul class="pricing-features">
+            <li class="pricing-feature-header">Tout Explorer, plus :</li>
+            <li>Accès stratégies VALORA QUANT</li>
+            <li>VALORA Academy — parcours complet</li>
+            <li>Partage de rendements sur parrainages</li>
+            <li>Système de parrainage multi-niveaux</li>
+            <li>Accès prioritaire aux pré-ventes $VLRA</li>
+          </ul>
+          <a href="#contact" class="pricing-cta">Rejoindre <span>→</span></a>
+        </article>
+
+        <article class="pricing-card pricing-card--featured reveal" data-delay="160">
+          <div class="pricing-badge">★ Le plus populaire</div>
+          <div class="pricing-card-head">
+            <h3>Partner</h3>
+            <div class="pricing-price">
+              <span class="pricing-amount">999</span><span class="pricing-currency">€</span>
+            </div>
+            <p class="pricing-desc">Le cercle complet. Stratégies, réseau, accès privilégiés.</p>
+          </div>
+          <ul class="pricing-features">
+            <li class="pricing-feature-header">Tout Investor, plus :</li>
+            <li>Accès VALORA VENTURES — projets &amp; startups</li>
+            <li>Événements privés VALORA NETWORK</li>
+            <li>Academy complète (finance, IA, entrepreneuriat)</li>
+            <li>Support dédié</li>
+            <li>Accès prioritaire aux nouvelles opportunités</li>
+          </ul>
+          <a href="#contact" class="pricing-cta pricing-cta--gold">Rejoindre <span>→</span></a>
+        </article>
+
+        <article class="pricing-card reveal" data-delay="240">
+          <div class="pricing-card-head">
+            <h3>Legacy</h3>
+            <div class="pricing-price">
+              <span class="pricing-amount">2 499</span><span class="pricing-currency">€</span>
+            </div>
+            <p class="pricing-desc">Pour ceux qui bâtissent sur le long terme. L'accès le plus profond.</p>
+          </div>
+          <ul class="pricing-features">
+            <li class="pricing-feature-header">Tout Partner, plus :</li>
+            <li>Cercle privé — places limitées</li>
+            <li>Accès VALORA REAL ASSETS — actifs tangibles</li>
+            <li>Allocations exclusives &amp; co-investissement</li>
+            <li>Groupe privé des fondateurs</li>
+            <li>Accès aux opportunités VC</li>
+          </ul>
+          <a href="#contact" class="pricing-cta">Rejoindre <span>→</span></a>
+        </article>
+
+      </div>
+
+      <p class="pricing-footnote reveal" data-delay="300">Paiement unique. Aucun abonnement. Accès à vie garanti.</p>
+
+    </div>
   </section>
 
   <!-- ============================================================
@@ -4808,74 +5820,56 @@
   </section>
 
   <!-- ============================================================
-       08 ÉCOSYSTÈME VALORA
+       08 ÉCOSYSTÈME VALORA — 6 PILIERS
   ============================================================ -->
   <div class="s-bridge s-bridge--light" aria-hidden="true"></div>
-  <section class="valora-ecosystem" id="ecosysteme">
-    <div class="eco-inner">
-      <div class="eco-split">
+  <section class="valora-ecosystem-pillars" id="ecosysteme">
+    <div class="ep-inner">
 
-        <!-- Gauche : texte -->
-        <div class="eco-left">
-          <h2 class="reveal">Connecté mondialement. Déployé stratégiquement.</h2>
-          <div class="eco-left-sep"></div>
-          <p class="reveal" data-delay="80">Valora n'est pas une simple plateforme. C'est un écosystème privé où stratégies, éducation, tokenisation, progression et communauté avancent dans une même direction.</p>
-        </div>
+      <div class="ep-heading">
+        <h2 class="reveal">Construire plus qu'un rendement.</h2>
+        <div class="section-sep reveal" data-delay="60"></div>
+        <p class="reveal" data-delay="100">Six dimensions. Un écosystème conçu pour durer.</p>
+      </div>
 
-        <!-- Droite : grille 2×2 -->
-        <div class="eco-card-grid">
+      <div class="ep-grid">
 
-          <article class="eco-card reveal" data-delay="0">
-            <svg class="eco-card-icon" width="28" height="28" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="2,26 10,16 16,20 24,10 34,14"/>
-              <polyline points="28,14 34,14 34,20"/>
-            </svg>
-            <div>
-              <h4>Stratégies VALORA</h4>
-              <p>Accédez aux stratégies delta-neutres institutionnelles de Valora pour générer des rendements stables et décorrélés des mouvements de marché.</p>
-            </div>
-            <a href="#delta" class="eco-card-link">Explorer →</a>
-          </article>
+        <article class="ep-card reveal" data-delay="0">
+          <div class="ep-card-status">Actif</div>
+          <h3>VALORA QUANT</h3>
+          <p>Infrastructure algorithmique déployée en continu, exploitant les opportunités d'arbitrage et les stratégies delta-neutres. Rendements stables, décorrélés du marché, 24h/24.</p>
+        </article>
 
-          <article class="eco-card reveal" data-delay="80">
-            <svg class="eco-card-icon" width="28" height="28" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M 18 4 L 34 12 L 18 20 L 2 12 Z"/>
-              <path d="M 6 16 L 6 26 C 6 30 12 33 18 33 C 24 33 30 30 30 26 L 30 16"/>
-            </svg>
-            <div>
-              <h4>VALORA Academy</h4>
-              <p>Sessions de formation live, explications des stratégies, parcours structuré du débutant à l'expert en DeFi et investissement crypto.</p>
-            </div>
-            <a href="#academy" class="eco-card-link">Explorer →</a>
-          </article>
+        <article class="ep-card reveal" data-delay="80">
+          <div class="ep-card-status">Actif</div>
+          <h3>VALORA VENTURES</h3>
+          <p>Participation au financement de projets à fort potentiel en IA, Fintech, Web3 et SaaS — des opportunités habituellement réservées aux insiders et aux fonds institutionnels.</p>
+        </article>
 
-          <article class="eco-card reveal" data-delay="160">
-            <svg class="eco-card-icon" width="28" height="28" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M 18 3 L 22 14 L 34 14 L 25 21 L 28 33 L 18 26 L 8 33 L 11 21 L 2 14 L 14 14 Z"/>
-            </svg>
-            <div>
-              <h4>Token $VLRA</h4>
-              <p>Un actif d'écosystème qui relie participation, gouvernance et appartenance au cercle.</p>
-            </div>
-            <a href="#token" class="eco-card-link">Explorer →</a>
-          </article>
+        <article class="ep-card reveal" data-delay="160">
+          <div class="ep-card-status ep-card-status--dev">En développement</div>
+          <h3>VALORA REAL ASSETS</h3>
+          <p>Accès progressif aux actifs tangibles générateurs de revenus : immobilier fractionné, parkings, entrepôts et projets d'énergie renouvelable. L'économie réelle sur la blockchain.</p>
+        </article>
 
-          <article class="eco-card reveal" data-delay="240">
-            <svg class="eco-card-icon" width="28" height="28" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="18" cy="18" r="6"/>
-              <circle cx="6" cy="8" r="4"/><circle cx="30" cy="8" r="4"/>
-              <circle cx="6" cy="28" r="4"/><circle cx="30" cy="28" r="4"/>
-              <line x1="10" y1="10" x2="14" y2="14"/><line x1="26" y1="10" x2="22" y2="14"/>
-              <line x1="10" y1="26" x2="14" y2="22"/><line x1="26" y1="26" x2="22" y2="22"/>
-            </svg>
-            <div>
-              <h4>Cercle privé</h4>
-              <p>Une communauté sélective où la qualité des membres prime, dans une logique de confiance.</p>
-            </div>
-            <a href="#contact" class="eco-card-link">Explorer →</a>
-          </article>
+        <article class="ep-card reveal" data-delay="240">
+          <div class="ep-card-status">Actif</div>
+          <h3>VALORA ACADEMY</h3>
+          <p>Formation continue exclusive en finance personnelle, investissement, fiscalité, intelligence artificielle et entrepreneuriat. Du débutant à l'expert en parcours structuré.</p>
+        </article>
 
-        </div>
+        <article class="ep-card reveal" data-delay="320">
+          <div class="ep-card-status">Actif</div>
+          <h3>VALORA NETWORK</h3>
+          <p>Le cercle privé qui crée le plus de valeur. Réseau d'entrepreneurs, d'investisseurs et de partenaires sélectionnés. Événements exclusifs, connexions stratégiques, intelligence collective.</p>
+        </article>
+
+        <article class="ep-card reveal" data-delay="400">
+          <div class="ep-card-status">Actif</div>
+          <h3>VALORA ASSIST</h3>
+          <p>Solutions de confiance pour avancer sereinement dans vos démarches professionnelles et personnelles. Un interlocuteur dédié, des réponses adaptées à votre situation.</p>
+        </article>
+
       </div>
     </div>
   </section>
