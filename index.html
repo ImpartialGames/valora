@@ -4166,19 +4166,34 @@
       .valora-team,
       .valora-belonging,
       .valora-pricing,
-      .valora-ecosystem-pillars { padding-left: 20px; padding-right: 20px; }
-      .vision-pillars { grid-template-columns: 1fr 1fr; }
-      .vision-quote { padding: 24px 22px; }
-      .ep-grid { grid-template-columns: 1fr; }
+      .valora-ecosystem-pillars {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 52px;
+        padding-bottom: 52px;
+      }
+      /* Vision : 2 colonnes compactes, quote moins haute */
+      .vision-pillars { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .vision-pillar { padding: 14px 12px; }
+      .vision-quote { padding: 20px 20px; }
+      .vision-inner { gap: 24px; }
+      /* Piliers écosystème : 2 colonnes sur mobile */
+      .ep-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .ep-card { padding: 18px 14px; gap: 10px; }
+      /* Pricing : 1 colonne */
       .pricing-grid { grid-template-columns: 1fr; }
-      /* Sur mobile : la carte redevient verticale */
+      /* Équipe : carte verticale, photo portrait compact */
       .team-card { flex-direction: column; }
-      .team-photo-wrap { width: 100%; height: 260px; }
-      .belonging-callout { padding: 22px 20px; }
+      .team-photo-wrap { width: 100%; height: 240px; }
+      .team-bio { padding: 18px 18px 22px; gap: 10px; }
+      /* Appartenir */
+      .belonging-callout { padding: 20px 18px; }
+      .belonging-inner { gap: 22px; }
     }
     @media (max-width: 480px) {
-      .vision-pillars { grid-template-columns: 1fr; }
-      .team-photo-wrap { height: 220px; }
+      .vision-pillars { grid-template-columns: 1fr 1fr; }
+      .ep-grid { grid-template-columns: 1fr; }
+      .team-photo-wrap { height: 200px; }
     }
 
     /* ============================================================
@@ -4551,6 +4566,8 @@
        Toutes les sections après Stratégies adoptent EXACTEMENT
        la taille et la typo du titre Delta (référence).
     ============================================================ */
+    .overview-heading h2,
+    .delta-heading h2,
     .academy-hero-inner h2,
     .token-hero-inner h2,
     .comp-hero-inner h2,
@@ -4682,6 +4699,25 @@
       .eco-left-sep,
       .access-line {
         margin: 18px auto;
+      }
+
+      /* --- Uniformisation des titres h2 sur mobile --- */
+      .overview-heading h2,
+      .delta-heading h2,
+      .academy-hero-inner h2,
+      .token-hero-inner h2,
+      .comp-hero-inner h2,
+      .ranks-heading h2,
+      .roadmap-heading h2,
+      .access-content h2,
+      .vision-heading h2,
+      .principles-heading h2,
+      .team-heading h2,
+      .belonging-heading h2,
+      .pricing-heading h2,
+      .ep-heading h2 {
+        font-size: clamp(32px, 8vw, 42px) !important;
+        white-space: normal !important;
       }
 
       /* --- Paddings horizontaux des sections (anti-débordement) --- */
