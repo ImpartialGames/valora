@@ -4129,6 +4129,21 @@
       border-color: transparent;
       color: var(--black);
     }
+    .pricing-card--legacy {
+      background: linear-gradient(160deg, rgba(184, 149, 75, 0.06) 0%, rgba(255, 255, 255, 0.03) 60%, rgba(255, 255, 255, 0.02) 100%);
+      border-color: rgba(184, 149, 75, 0.30);
+    }
+    .pricing-card--legacy:hover {
+      border-color: rgba(184, 149, 75, 0.55);
+      box-shadow: var(--glass-inset), 0 0 0 1px rgba(184, 149, 75, 0.20), 0 32px 80px rgba(184, 149, 75, 0.08);
+    }
+    .pricing-badge--legacy {
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid rgba(184, 149, 75, 0.50);
+      font-size: 8px;
+      letter-spacing: 0.16em;
+    }
     .pricing-footnote {
       text-align: center;
       margin: clamp(22px, 2.5vw, 36px) 0 0;
